@@ -1,0 +1,51 @@
+/* Remove on integration */
+
+.cta-item a,
+.button-item a{
+	color:#f1f1f1;
+  background:#000;
+	text-decoration:none;
+}
+.container--narrower {max-width:900px;}    
+.container--narrow {max-width:1000px;}
+.container--normal {max-width:1200px;}
+.container--medium {max-width:1600px;}
+.container--wide {max-width:1800px;}
+.container--wider{max-width:2000px;}
+.container--full{max-width:100%;}
+
+.container {
+	margin:0 auto;
+	padding: 0;
+	width: 100%;
+    z-index: 1;
+}
+/* EOF Remove one integration */
+
+
+
+.ctas-grid{
+	display: flex;
+	flex-wrap:wrap;
+	margin:-10px;
+	justify-content:center;
+}
+.ctas-grid .grid-item{
+	margin:10px;
+}
+.ctas-full-width{
+	width:100%;
+}    
+.grid-module .content.img-fit{
+	height:100%;
+	width:100%;
+}
+.grid-module .content.img-fit img{
+	width:100% !important;
+	height:100% !important;
+	object-fit:cover;
+}
+.grid-module .grid-item{
+	display: grid;
+	overflow:hidden;
+}

@@ -1,0 +1,194 @@
+html{
+  height:100%;
+  font-size:10px;
+}
+body {
+  font-family: {{ font.bodyFontFamily }};
+  font-size:{{ font.bodyFontSize }};
+  font-weight:{{ font.bodyFontWeight }};
+  line-height:{{ font.bodyFontLineHeight }};
+  color:{{ font.bodyFontColor }};
+}
+h1 {
+  font-family: {{ font.h1FontFamily }};
+  font-size:{{ font.h1FontSize }};
+  font-weight:{{ font.h1FontWeight }};
+  line-height:{{ font.h1FontLineHeight }};
+  color:{{ font.h1FontColor }};
+}
+h2 {
+  font-family: {{ font.h2FontFamily }};
+  font-size:{{ font.h2FontSize }};
+  font-weight:{{ font.h2FontWeight }};
+  line-height:{{ font.h2FontLineHeight }};
+  color:{{ font.h2FontColor }};
+}
+h3 {
+  font-family: {{ font.h3FontFamily }};
+  font-size:{{ font.h3FontSize }};
+  font-weight:{{ font.h3FontWeight }};
+  line-height:{{ font.h3FontLineHeight }};
+  color:{{ font.h3FontColor }};
+}
+h4 {
+  font-family: {{ font.h4FontFamily }};
+  font-size:{{ font.h4FontSize }};
+  font-weight:{{ font.h4FontWeight }};
+  line-height:{{ font.h4FontLineHeight }};
+  color:{{ font.h4FontColor }};
+}
+h5 {
+  font-family: {{ font.h5FontFamily }};
+  font-size:{{ font.h5FontSize }};
+  font-weight:{{ font.h5FontWeight }};
+  line-height:{{ font.h5FontLineHeight }};
+  color:{{ font.h5FontColor }};
+}
+h6 {
+  font-family: {{ font.h6FontFamily }};
+  font-size:{{ font.h6FontSize }};
+  font-weight:{{ font.h6FontWeight }};
+  line-height:{{ font.h6FontLineHeight }};
+  color:{{ font.h6FontColor }};
+}
+p {
+  font-family: {{ font.pFontFamily }};
+  font-size:{{ font.pFontSize }};
+  font-weight:{{ font.pFontWeight }};
+  line-height:{{ font.pFontLineHeight }};
+  color:{{ font.pFontColor }};
+}
+li {
+  font-family: {{ font.liFontFamily }};
+  font-size:{{ font.liFontSize }};
+  font-weight:{{ font.liFontWeight }};
+  line-height:{{ font.liFontLineHeight }};
+  color:{{ font.liFontColor }};
+}
+
+.primaryColor{
+  color:{{ color.primary }};
+}
+.secondaryColor{
+  color:{{ color.secondary }};
+}
+.tertiaryColor{
+  color:{{ color.tertiary }};
+}
+.quaternaryColor{
+  color:{{ color.quaternary }};
+}
+
+.primaryBgColor{
+  background-color:{{ color.primary }};
+}
+.secondaryBgColor{
+  background-color:{{ color.secondary }};
+}
+.tertiaryBgColor{
+  background-color:{{ color.tertiary }};
+}
+.quaternaryBgColor{
+  background-color:{{ color.quaternary }};
+}
+
+.btn{
+  position:relative;
+  display: inline-block;
+}
+.btn.normal{
+  font-family: {{ font.btnNormalFontFamily }};
+  font-size:{{ font.btnNormalFontSize }};
+  font-weight:{{ font.btnNormalFontWeight }};
+  line-height:{{ font.btnNormalFontLineHeight }};
+
+  padding-top:{{ btn.NormalPaddingTop }}rem;
+  padding-right:{{ btn.NormalPaddingRight }}rem;
+  padding-bottom:{{ btn.NormalPaddingBottom }}rem;
+  padding-left:{{ btn.NormalPaddingLeft }}rem;
+
+  border-radius:{{ btn.NormalBorderRadiusTopLeft }}px {{ btn.NormalBorderRadiusTopRight }}px {{ btn.NormalBorderRadiusBottomRight }}px {{ btn.NormalBorderRadiusBottomLeft }}px;
+}
+.btn.small{
+  font-family: {{ font.btnSmallFontFamily }};
+  font-size:{{ font.btnSmallFontSize }};
+  font-weight:{{ font.btnSmallFontWeight }};
+  line-height:{{ font.btnSmallFontLineHeight }};
+
+  padding-top:{{ btn.SmallPaddingTop }}rem;
+  padding-right:{{ btn.SmallPaddingRight }}rem;
+  padding-bottom:{{ btn.SmallPaddingBottom }}rem;
+  padding-left:{{ btn.SmallPaddingLeft }}rem;
+
+  border-radius:{{ btn.SmallBorderRadiusTopLeft }}px {{ btn.SmallBorderRadiusTopRight }}px {{ btn.SmallBorderRadiusBottomRight }}px {{ btn.SmallBorderRadiusBottomLeft }}px;
+}
+.btn.large{
+  font-family: {{ font.btnLargeFontFamily }};
+  font-size:{{ font.btnLargeFontSize }};
+  font-weight:{{ font.btnLargeFontWeight }};
+  line-height:{{ font.btnLargeFontLineHeight }};
+
+  padding-top:{{ btn.LargePaddingTop }}rem;
+  padding-right:{{ btn.LargePaddingRight }}rem;
+  padding-bottom:{{ btn.LargePaddingBottom }}rem;
+  padding-left:{{ btn.LargePaddingLeft }}rem;
+
+  border-radius:{{ btn.LargeBorderRadiusTopLeft }}px {{ btn.LargeBorderRadiusTopRight }}px {{ btn.LargeBorderRadiusBottomRight }}px {{ btn.LargeBorderRadiusBottomLeft }}px;
+}
+.cta .cta_button{
+  position:relative;
+  display: inline-block;
+}
+.cta.normal .cta_button{
+  font-family: {{ font.btnNormalFontFamily }};
+  font-size:{{ font.btnNormalFontSize }};
+  font-weight:{{ font.btnNormalFontWeight }};
+  line-height:{{ font.btnNormalFontLineHeight }};
+
+  padding-top:{{ btn.NormalPaddingTop }}rem;
+  padding-right:{{ btn.NormalPaddingRight }}rem;
+  padding-bottom:{{ btn.NormalPaddingBottom }}rem;
+  padding-left:{{ btn.NormalPaddingLeft }}rem;
+
+  border-radius:{{ btn.NormalBorderRadiusTopLeft }}px {{ btn.NormalBorderRadiusTopRight }}px {{ btn.NormalBorderRadiusBottomRight }}px {{ btn.NormalBorderRadiusBottomLeft }}px;
+}
+.cta.small .cta_button{
+  font-family: {{ font.btnSmallFontFamily }};
+  font-size:{{ font.btnSmallFontSize }};
+  font-weight:{{ font.btnSmallFontWeight }};
+  line-height:{{ font.btnSmallFontLineHeight }};
+
+  padding-top:{{ btn.SmallPaddingTop }}rem;
+  padding-right:{{ btn.SmallPaddingRight }}rem;
+  padding-bottom:{{ btn.SmallPaddingBottom }}rem;
+  padding-left:{{ btn.SmallPaddingLeft }}rem;
+
+  border-radius:{{ btn.SmallBorderRadiusTopLeft }}px {{ btn.SmallBorderRadiusTopRight }}px {{ btn.SmallBorderRadiusBottomRight }}px {{ btn.SmallBorderRadiusBottomLeft }}px;
+}
+.cta.large .cta_button{
+  font-family: {{ font.btnLargeFontFamily }};
+  font-size:{{ font.btnLargeFontSize }};
+  font-weight:{{ font.btnLargeFontWeight }};
+  line-height:{{ font.btnLargeFontLineHeight }};
+
+  padding-top:{{ btn.LargePaddingTop }}rem;
+  padding-right:{{ btn.LargePaddingRight }}rem;
+  padding-bottom:{{ btn.LargePaddingBottom }}rem;
+  padding-left:{{ btn.LargePaddingLeft }}rem;
+
+  border-radius:{{ btn.LargeBorderRadiusTopLeft }}px {{ btn.LargeBorderRadiusTopRight }}px {{ btn.LargeBorderRadiusBottomRight }}px {{ btn.LargeBorderRadiusBottomLeft }}px;
+}
+
+.white-content h1,
+.white-content h2,
+.white-content h3,
+.white-content h4,
+.white-content h5,
+.white-content h6,
+.white-content p,
+.white-content,
+.white-content label,
+.white-content blockquote,
+.white-content li{
+	color:#fff; 
+} 

@@ -1,0 +1,180 @@
+
+<div class="grid-module" style="
+								padding-top:{{ module.settings.section_padding_top }}rem;
+								padding-bottom:{{ module.settings.section_padding_bottom }}rem;
+								{% if module.settings.colors_backgrounds.background_type == 'color' %}
+								background:RGBA({{ module.settings.colors_backgrounds.background_color.color|convert_rgb }}, {{ module.settings.colors_backgrounds.background_color.opacity / 100 }} );
+								{% elif module.settings.colors_backgrounds.background_type == 'img' %}
+								background:url({{ module.settings.colors_backgrounds.background_image.src }});
+								background-size:cover;
+								background-position:center;
+								{% elif item.settings.colors_backgrounds.background_type == 'css' %} 
+								{{ item.settings.colors_backgrounds.gradient_css }}
+								{% endif %}"> 
+	<div class="container container--{{ module.settings.container_width }}">
+		<div class="grid-wrapper animatedParent animateOnce" style="grid-column-gap:{{ module.settings.grid_column_gap }}{{ module.settings.grid_gap_size_unit }};grid-row-gap:{{ module.settings.grid_row_gap }}{{ module.settings.grid_gap_size_unit }};"> 
+			{% for item in module.grids %}
+			<div class="{{ 'animated' if item.settings.animations.animations && !item.settings.animations.animate_content_only }} {{ 'delay-'~item.settings.animations.delay_value if item.settings.animations.animations && !item.settings.animations.animate_content_only && item.settings.animations.animation_delay }} {{ item.settings.animations.animation_type if item.settings.animations.animations && !item.settings.animations.animate_content_only }} grid-item grid-column-{{ item.settings.desktop_size.column_width }} grid-column-lg-{{ item.settings.tablet_size_landscape.column_width_xl }} grid-column-md-{{ item.settings.tablet_size_portrait.column_width_md }} grid-column-xs-{{ item.settings.mobile_size.column_width_xs }} grid-row-{{ item.settings.desktop_size.row_height }} grid-row-lg-{{ item.settings.tablet_size_landscape.row_height_xl }} grid-row-md-{{ item.settings.tablet_size_portrait.row_height_md }} grid-row-sm-{{ item.settings.mobile_size.row_height_sm }} align-{{ item.settings.alignment.vertical_content_alignment }} align-self-{{ item.settings.alignment.vertical_self_alignment }} justify-{{ item.settings.alignment.horizontal_content_alignment }} justify-self-{{ item.settings.alignment.horizontal_self_alignment }}{{ item.settings.colors_backgrounds.white_content ? " white-content" : "" }}"
+				 style="padding-top:{{ item.settings.spacing.padding_top }}{{ item.settings.spacing.padding_spacing_size_unit }};
+						padding-right:{{ item.settings.spacing.padding_right }}{{ item.settings.spacing.padding_spacing_size_unit }};
+						padding-bottom:{{ item.settings.spacing.padding_bottom }}{{ item.settings.spacing.padding_spacing_size_unit }};
+						padding-left:{{ item.settings.spacing.padding_left }}{{ item.settings.spacing.padding_spacing_size_unit }};
+						
+						margin-top:{{ item.settings.spacing.margin_top }}{{ item.settings.spacing.margin_spacing_size_unit }};
+						margin-right:{{ item.settings.spacing.margin_right }}{{ item.settings.spacing.margin_spacing_size_unit }};
+						margin-bottom:{{ item.settings.spacing.margin_bottom }}{{ item.settings.spacing.margin_spacing_size_unit }};
+						margin-left:{{ item.settings.spacing.margin_left }}{{ item.settings.spacing.margin_spacing_size_unit }};
+						
+						{% if item.settings.box_styles.border == 'all' %}
+						border:{{ item.settings.box_styles.border_width }}px {{ item.settings.box_styles.border_style }} RGBA({{ item.settings.box_styles.border_color.color|convert_rgb }}, {{ item.settings.box_styles.border_color.opacity / 100 }} );
+						{% elif item.settings.box_styles.border == 'separately' %}
+						{% if item.settings.box_styles.border_top %}
+						border-top:{{ item.settings.box_styles.border_top_width }}px {{ item.settings.box_styles.border_top_style }} RGBA({{ item.settings.box_styles.border_top_color.color|convert_rgb }}, {{ item.settings.box_styles.border_top_color.opacity / 100 }} );
+						{% endif %}
+						{% if item.settings.box_styles.border_right %}
+						border-right:{{ item.settings.box_styles.border_right_width }}px {{ item.settings.box_styles.border_right_style }} RGBA({{ item.settings.box_styles.border_right_color.color|convert_rgb }}, {{ item.settings.box_styles.border_right_color.opacity / 100 }} );
+						{% endif %}
+						{% if item.settings.box_styles.border_bottom %}
+						border-bottom:{{ item.settings.box_styles.border_bottom_width }}px {{ item.settings.box_styles.border_bottom_style }} RGBA({{ item.settings.box_styles.border_bottom_color.color|convert_rgb }}, {{ item.settings.box_styles.border_bottom_color.opacity / 100 }} );
+						{% endif %}
+						{% if item.settings.box_styles.border_left %}
+						border-left:{{ item.settings.box_styles.border_left_width }}px {{ item.settings.box_styles.border_left_style }} RGBA({{ item.settings.box_styles.border_left_color.color|convert_rgb }}, {{ item.settings.box_styles.border_left_color.opacity / 100 }} );
+						{% endif %}
+						{% endif %}
+
+						{% if item.settings.box_styles.border_radius_type == 'all' %}
+						border-radius:{{ item.settings.box_styles.border_radius }}px;
+						{% elif item.settings.box_styles.border_radius_type == 'separately' %}
+						border-radius:{{ item.settings.box_styles.border_radius_top_left }}px {{ item.settings.box_styles.border_radius_top_right }}px {{ item.settings.box_styles.border_radius_bottom_right }}px {{ item.settings.box_styles.border_radius_bottom_left }}px;
+						{% endif %}
+						{% if item.settings.box_styles.box_shadow %}
+						box-shadow:{{ item.settings.box_styles.box_shadow_style }};
+						{% endif %}
+						{% if item.settings.colors_backgrounds.background_type == 'color' %}
+						background:RGBA({{ item.settings.colors_backgrounds.background_color.color|convert_rgb }}, {{ item.settings.colors_backgrounds.background_color.opacity / 100 }} );
+						{% elif item.settings.colors_backgrounds.background_type == 'img' %}
+						background:url({{ item.settings.colors_backgrounds.background_image.src }});
+						background-size:cover;
+						background-position:center;
+						{% elif item.settings.colors_backgrounds.background_type == 'css' %} 
+						{{ item.settings.colors_backgrounds.gradient_css }}
+						{% endif %}">
+				<div class="content {{ 'animated' if item.settings.animations.animations && item.settings.animations.animate_content_only }} {{ 'delay-'~item.settings.animations.delay_value if item.settings.animations.animations && item.settings.animations.animate_content_only && item.settings.animations.animation_delay }} {{ item.settings.animations.animation_type if item.settings.animations.animations && item.settings.animations.animate_content_only }}{% if item.content_type == 'image' %}{{ item.image_fit_to_container ? ' img-fit' : "" }}{% endif %}" {% if item.settings.content_max_width %}style="max-width:{{item.settings.content_max_width}}px";{% endif %}> 
+					{% if item.content_type == 'rich_text' %}
+					{{ item.grid_content }}
+					{% elif item.content_type == 'image' %}
+					{% if item.content_image.src %}
+					{% set sizeAttrs = 'width="{{ item.content_image.width }}" height="{{ item.content_image.height }}"' %}
+					{% if item.content_image.size_type == 'auto' %}
+					{% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+					{% elif item.content_image.size_type == 'auto_custom_max' %}
+					{% set sizeAttrs = 'width="{{ item.content_image.max_width }}" height="{{ item.content_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+					{% endif %}
+					{% set loadingAttr = item.content_image.loading != 'disabled' ? 'loading="{{ item.content_image.loading }}"' : '' %}
+					<img src="{{ item.content_image.src }}" alt="{{ item.content_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+					{% endif %}
+					{% elif item.content_type == 'form' %}
+					{{ item.form_content }}
+					{% form
+					form_to_use="{{ item.form_field.form_id }}"
+					response_response_type="{{ item.form_field.response_type }}"
+					response_message="{{ item.form_field.message }}"
+					response_redirect_id="{{ item.form_field.redirect_id }}"
+					response_redirect_url="{{item.form_field.redirect_url}}"
+					gotowebinar_webinar_key="{{ item.form_field.gotowebinar_webinar_key }}"
+				%}
+					{% elif item.content_type == 'cta' %}
+
+					<div class="ctas-grid">
+
+
+						{% for item2 in item.cta_buttons %}
+						{% if item2.type == 'cta' %}
+						<div class="grid-item cta-item">
+							<div class="cta{{ ' cta--alt' if item2.theme == "alt" }} {{ item2.button_size }}">
+								{% cta guid="{{ item2.cta_field }}" %}
+							</div>
+						</div>
+						{% elif item2.type == 'button' %}
+						{% set href = item2.link_field.url.href %}
+						{% if item2.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+						{% set href = "mailto:" + href %}
+						{% endif %}
+						<div class="grid-item button-item">
+							<a href="{{ href }}" {% if item2.link_field.open_in_new_tab %}target="_blank"{% endif %} {% if item2.link_field.rel %}rel="{{ item2.link_field.rel }}"{% endif %} class="btn{{ ' btn--alt' if item2.theme == "alt" }} {{ item2.button_size }}" >
+								{{ item2.button_text }}
+							</a>
+						</div>
+						{% endif %}			
+						{% endfor %}
+					</div>
+					{% elif item.content_type == 'meeting' %}
+					<div class="meeting--embed">
+						<div class="meetings-iframe-container" data-src="{{ item.meeting_field }}?embed=true"></div>
+						<script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+						<div class="meeting--embed__alternative-contact">
+							{{ item.alternative_meeting_text }}
+						</div>
+					</div>
+					{% elif item.content_type == 'testimonial' %}
+					<div class="left-right__testimonial">
+						<div class="left-right__testimonial__top">
+							{% if item.profile.src %}
+							<div class="left-right__testimonial__img" style="background-image:url('{{ item.profile.src }}');" alt="{{ item.profile.alt }}"></div>
+							{% endif %}
+							<div class="left-right__testimonial__text">
+								<span class="text-h4">{{ item.testimonial_name }}</span>
+								<span class="text-h4">{{ item.testimonial_role }}</span>
+							</div>
+						</div>
+						{{ item.quote }}
+					</div> 
+					{% elif item.content_type == 'video' %}
+
+					{% if item %}
+					<div class="left-right__video">
+						{% if item_type == 'hubspot' %}
+						{% if item.videoplayer.player_id %}
+						{% set max_width = item.videoplayer.size_type == 'auto_custom_max' ? item.videoplayer.max_width : item.videoplayer.width %}
+						{% set max_height = item.videoplayer.size_type == 'auto_custom_max' ? item.videoplayer.max_height : item.videoplayer.height %}
+						{% widget_block video_player "embed_player"
+									overrideable=False,
+									type='scriptV4',
+									hide_playlist=True,
+									viral_sharing=False,
+									embed_button=False,
+									autoplay={{ item.autoplay_vidyard }},
+									hidden_controls={{ item.hide_controls }},
+									loop={{ item.loop_vidyard }},
+									muted={{ item.mute_by_default }},
+									full_width={{ item.videoplayer.size_type == 'auto_full_width' }},
+									width="{{ max_width }}",
+									height="{{ max_height }}",
+									player_id="{{ item.videoplayer.player_id }}"
+								%}
+						{% widget_attribute "conversion_asset" %}
+						{{ item.videoplayer.conversion_asset|tojson|safe }}
+						{% end_widget_attribute %}
+						{% end_widget_block %}
+						{% endif %}
+						{% elif item.video_type == 'custom' %}
+						{% if item.video %}
+						<video src="{{ item.video }}" {{ 'playsinline autoplay="true" muted' if item.autoplay }} {{ 'loop="true"' if item.loop }} {{ 'controls' if item.show_controls }} {{ 'poster="'~item.video_thumbnail.src~'"' if item.video_thumbnail.src }} />
+						{% endif %}
+						{% elif item.video_type == 'embed' %}
+						{% if item.embed %}
+						{{ item.embed }}
+						{% endif %}
+						{% endif %}
+					</div>
+					{% endif %}
+
+					{% endif %}
+				</div>
+			</div>
+			{% endfor %} 
+		</div>
+	</div>
+</div>
+
+

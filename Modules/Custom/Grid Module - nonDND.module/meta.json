@@ -1,0 +1,15 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 56790608326,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../../Stylesheets/_module-grid.css",
+    "name" : "_module-grid.css"
+  }, {
+    "autoload" : true,
+    "path" : "../../../../SpiderWeb Theme Boilerplate/css/elements/_typography.css",
+    "name" : "_typography.css"
+  } ],
+  "is_available_for_new_content" : true
+}

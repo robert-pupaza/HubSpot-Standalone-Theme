@@ -1,0 +1,110 @@
+{% set customFontFamily = 'Custom-font' %}
+
+
+{%- set font = {
+	  'bodyFontFamily':			theme.typography.body_font.body_google.font if theme.typography.body_font.font_type_body == "google" else customFontFamily,
+    'bodyFontSize':			theme.typography.body_font.body_google.size~theme.typography.body_font.body_google.size_unit if theme.typography.body_font.font_type_body == "google" else theme.typography.body_font.body_custom.size~theme.typography.body_font.body_custom.size_unit,
+    'bodyFontWeight':			theme.typography.body_font.weight,
+    'bodyFontLineHeight':		theme.typography.body_font.line_height,
+    'bodyFontColor':			theme.typography.body_font.body_google.color if theme.typography.body_font.font_type_body == "google" else theme.typography.body_font.body_custom.color,    
+
+    'h1FontFamily':			theme.typography.h1_font.h1_google.font if theme.typography.h1_font.font_type_h1 == "google" else customFontFamily,
+    'h1FontSize':			theme.typography.h1_font.h1_google.size~theme.typography.h1_font.h1_google.size_unit if theme.typography.h1_font.font_type_h1 == "google" else theme.typography.h1_font.h1_custom.size~theme.typography.h1_font.h1_custom.size_unit,
+    'h1FontWeight':			theme.typography.h1_font.weight,
+    'h1FontLineHeight':		theme.typography.h1_font.line_height,
+    'h1FontColor':			theme.typography.h1_font.h1_google.color if theme.typography.h1_font.font_type_h1 == "google" else theme.typography.h1_font.h1_custom.color,   
+
+    'h2FontFamily':			theme.typography.h2_font.h2_google.font if theme.typography.h2_font.font_type_h2 == "google" else customFontFamily,
+    'h2FontSize':			theme.typography.h2_font.h2_google.size~theme.typography.h2_font.h2_google.size_unit if theme.typography.h2_font.font_type_h2 == "google" else theme.typography.h2_font.h2_custom.size~theme.typography.h2_font.h2_custom.size_unit,
+    'h2FontWeight':			theme.typography.h2_font.weight,
+    'h2FontLineHeight':		theme.typography.h2_font.line_height,
+    'h2FontColor':			theme.typography.h2_font.h2_google.color if theme.typography.h2_font.font_type_h2 == "google" else theme.typography.h2_font.h2_custom.color, 
+
+    'h3FontFamily':			theme.typography.h3_font.h3_google.font if theme.typography.h3_font.font_type_h3 == "google" else customFontFamily,
+    'h3FontSize':			theme.typography.h3_font.h2_google.size~theme.typography.h3_font.h3_google.size_unit if theme.typography.h3_font.font_type_h3 == "google" else theme.typography.h3_font.h3_custom.size~theme.typography.h3_font.h3_custom.size_unit,
+    'h3FontWeight':			theme.typography.h3_font.weight,
+    'h3FontLineHeight':		theme.typography.h3_font.line_height,
+    'h3FontColor':			theme.typography.h3_font.h3_google.color if theme.typography.h3_font.font_type_h3 == "google" else theme.typography.h3_font.h3_custom.color,
+
+    'h4FontFamily':			theme.typography.h4_font.h4_google.font if theme.typography.h4_font.font_type_h4 == "google" else customFontFamily,
+    'h4FontSize':			theme.typography.h4_font.h4_google.size~theme.typography.h4_font.h4_google.size_unit if theme.typography.h4_font.font_type_h4 == "google" else theme.typography.h4_font.h4_custom.size~theme.typography.h4_font.h4_custom.size_unit,
+    'h4FontWeight':			theme.typography.h4_font.weight,
+    'h4FontLineHeight':		theme.typography.h4_font.line_height,
+    'h4FontColor':			theme.typography.h4_font.h4_google.color if theme.typography.h4_font.font_type_h4 == "google" else theme.typography.h4_font.h4_custom.color, 
+
+    'h5FontFamily':			theme.typography.h5_font.h5_google.font if theme.typography.h5_font.font_type_h5 == "google" else customFontFamily,
+    'h5FontSize':			theme.typography.h5_font.h5_google.size~theme.typography.h5_font.h5_google.size_unit if theme.typography.h5_font.font_type_h5 == "google" else theme.typography.h5_font.h5_custom.size~theme.typography.h5_font.h5_custom.size_unit,
+    'h5FontWeight':			theme.typography.h5_font.weight,
+    'h5FontLineHeight':		theme.typography.h5_font.line_height,
+    'h5FontColor':			theme.typography.h5_font.h5_google.color if theme.typography.h5_font.font_type_h5 == "google" else theme.typography.h5_font.h5_custom.color, 
+
+    'h6FontFamily':			theme.typography.h6_font.h6_google.font if theme.typography.h6_font.font_type_h6 == "google" else customFontFamily,
+    'h6FontSize':			theme.typography.h6_font.h6_google.size~theme.typography.h6_font.h6_google.size_unit if theme.typography.h6_font.font_type_h6 == "google" else theme.typography.h6_font.h6_custom.size~theme.typography.h6_font.h6_custom.size_unit,
+    'h6FontWeight':			theme.typography.h6_font.weight,
+    'h6FontLineHeight':		theme.typography.h6_font.line_height,
+    'h6FontColor':			theme.typography.h6_font.h6_google.color if theme.typography.h6_font.font_type_h6 == "google" else theme.typography.h6_font.h6_custom.color, 
+
+    'pFontFamily':			theme.typography.paragraph_font.paragraph_google.font if theme.typography.paragraph_font.font_type_paragraph == "google" else customFontFamily,
+    'pFontSize':			theme.typography.paragraph_font.paragraph_google.size~theme.typography.paragraph_font.paragraph_google.size_unit if theme.typography.paragraph_font.font_type_paragraph == "google" else theme.typography.paragraph_font.paragraph_custom.size~theme.typography.paragraph_font.paragraph_custom.size_unit,
+    'pFontWeight':			theme.typography.paragraph_font.weight,
+    'pFontLineHeight':		theme.typography.paragraph_font.line_height,
+    'pFontColor':			theme.typography.paragraph_font.paragraph_google.color if theme.typography.paragraph_font.font_type_paragraph == "google" else theme.typography.paragraph_font.paragraph_custom.color, 
+
+    'liFontFamily':			theme.typography.li_font.li_google.font if theme.typography.li_font.font_type_li == "google" else customFontFamily,
+    'liFontSize':			theme.typography.li_font.li_google.size~theme.typography.li_font.li_google.size_unit if theme.typography.li_font.font_type_li == "google" else theme.typography.li_font.li_custom.size~theme.typography.li_font.li_custom.size_unit,
+    'liFontWeight':			theme.typography.li_font.weight,
+    'liFontLineHeight':		theme.typography.li_font.line_height,
+    'liFontColor':			theme.typography.li_font.li_google.color if theme.typography.li_font.font_type_li == "google" else theme.typography.li_font.li_custom.color,
+
+     'btnNormalFontFamily':			theme.buttons_ctas.normal.button_google.font if theme.buttons_ctas.normal.font_type_button == "google" else customFontFamily,
+    'btnNormalFontSize':			theme.buttons_ctas.normal.button_google.size~theme.buttons_ctas.normal.button_google.size_unit if theme.buttons_ctas.normal.font_type_button == "google" else theme.buttons_ctas.normal.button_custom.size~theme.buttons_ctas.normal.button_custom.size_unit,
+    'btnNormalFontWeight':			theme.buttons_ctas.normal.weight,
+    'btnNormalFontLineHeight':		theme.buttons_ctas.normal.line_height,
+
+    'btnSmallFontFamily':			theme.buttons_ctas.small.button_google.font if theme.buttons_ctas.small.font_type_button == "google" else customFontFamily,
+    'btSmalllFontSize':			theme.buttons_ctas.small.button_google.size~theme.buttons_ctas.small.button_google.size_unit if theme.buttons_ctas.small.font_type_button == "google" else theme.buttons_ctas.small.button_custom.size~theme.buttons_ctas.small.button_custom.size_unit,
+    'btnSmallFontWeight':			theme.buttons_ctas.small.weight,
+    'btnSmallFontLineHeight':		theme.buttons_ctas.small.line_height,
+
+    'btnLargeFontFamily':			theme.buttons_ctas.normal.button_google.font if theme.buttons_ctas.large.font_type_button == "google" else customFontFamily,
+    'btnLargeFontSize':			theme.buttons_ctas.large.button_google.size~theme.buttons_ctas.large.button_google.size_unit if theme.buttons_ctas.large.font_type_button == "google" else theme.buttons_ctas.large.button_custom.size~theme.buttons_ctas.large.button_custom.size_unit,
+    'btnLargeFontWeight':			theme.buttons_ctas.large.weight,
+    'btnLargeFontLineHeight':		theme.buttons_ctas.large.line_height,
+
+} %}
+
+{%- set btn = {
+
+'NormalPaddingTop':		theme.buttons_ctas.normal.padding_top,
+'NormalPaddingRight':		theme.buttons_ctas.normal.padding_right,
+'NormalPaddingBottom':		theme.buttons_ctas.normal.padding_bottom,
+'NormalPaddingLeft':		theme.buttons_ctas.normal.padding_left,
+
+'SmallPaddingTop':		theme.buttons_ctas.small.padding_top,
+'SmallPaddingRight':		theme.buttons_ctas.small.padding_right,
+'SmallPaddingBottom':		theme.buttons_ctas.small.padding_bottom,
+'SmallPaddingLeft':		theme.buttons_ctas.small.padding_left,
+
+'LargePaddingTop':		theme.buttons_ctas.large.padding_top,
+'LargePaddingRight':		theme.buttons_ctas.large.padding_right,
+'LargePaddingBottom':		theme.buttons_ctas.large.padding_bottom,
+'LargePaddingLeft':		theme.buttons_ctas.large.padding_left,
+
+'NormalBorderRadiusTopLeft':		theme.buttons_ctas.normal.border_radius_top_left,
+'NormalBorderRadiusTopRight':		theme.buttons_ctas.normal.border_radius_top_right,
+'NormalBorderRadiusBottomRight':		theme.buttons_ctas.normal.border_radius_bottom_right,
+'NormalBorderRadiusBottomLeft':		theme.buttons_ctas.normal.border_radius_bottom_left,
+
+'SmallBorderRadiusTopLeft':		theme.buttons_ctas.small.border_radius_top_left,
+'SmallBorderRadiusTopRight':		theme.buttons_ctas.small.border_radius_top_right,
+'SmallBorderRadiusBottomRight':		theme.buttons_ctas.small.border_radius_bottom_right,
+'SmallBorderRadiusBottomLeft':		theme.buttons_ctas.small.border_radius_bottom_left,
+
+'LargeBorderRadiusTopLeft':		theme.buttons_ctas.large.border_radius_top_left,
+'LargeBorderRadiusTopRight':		theme.buttons_ctas.large.border_radius_top_right,
+'LargeBorderRadiusBottomRight':		theme.buttons_ctas.large.border_radius_bottom_right,
+'LargeBorderRadiusBottomLeft':		theme.buttons_ctas.large.border_radius_bottom_left,
+
+
+
+} %}

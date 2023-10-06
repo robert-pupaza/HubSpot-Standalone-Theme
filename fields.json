@@ -1,0 +1,1703 @@
+[ 
+
+  {
+    "type": "group",
+    "name": "typography",
+    "label": "Typography",
+    "expanded": false,
+    "children": [
+      {
+        "type" : "group",
+        "name":"body_font",
+        "label":"Body Font",
+        "children":[
+          {
+            "id" : "font_type_body",
+            "name" : "font_type_body",
+            "label" : "Body Font Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "custom", "Custom" ],[ "google", "Google Font" ]],
+            "type" : "choice",
+            "default" : "google"
+          },
+          {
+            "name" : "body_google",
+            "label" : "Body",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": true,
+            "default" : {
+              "size" : 1.2,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_body",
+              "controlling_value_regex" : "google",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "body_custom",
+            "label" : "Body",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": false,
+            "default" : {
+              "size" : 1.2,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_body",
+              "controlling_value_regex" : "custom",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "font":true,
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "line_height",
+            "label" : "Line Height",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 50,
+            "step" : 0.05,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1
+          },
+          {
+            "name" : "weight",
+            "label" : "Font Weight",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 100,
+            "max" : 900,
+            "step" : 100,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 100
+          }
+        ]
+      },
+      {
+        "type" : "group",
+        "name":"h1_font",
+        "label":"H1 Font",
+        "children":[
+          {
+            "id" : "font_type_h1",
+            "name" : "font_type_h1",
+            "label" : "H1 Font Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "custom", "Custom" ],[ "google", "Google Font" ]],
+            "type" : "choice",
+            "default" : "custom"
+          },
+          {
+            "name" : "h1_google",
+            "label" : "H1",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": true,
+            "default" : {
+              "size" : 3.6,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_h1",
+              "controlling_value_regex" : "google",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "h1_custom",
+            "label" : "H1",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": false,
+            "default" : {
+              "size" : 3.6,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_h1",
+              "controlling_value_regex" : "custom",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "font":true,
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "line_height",
+            "label" : "Line Height",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 50,
+            "step" : 0.05,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1
+          },
+          {
+            "name" : "weight",
+            "label" : "Font Weight",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 100,
+            "max" : 900,
+            "step" : 100,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 100
+          }
+        ]
+      },
+      {
+        "type" : "group",
+        "name":"h2_font",
+        "label":"H2 Font",
+        "children":[
+          {
+            "id" : "font_type_h2",
+            "name" : "font_type_h2",
+            "label" : "H2 Font Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "custom", "Custom" ],[ "google", "Google Font" ]],
+            "type" : "choice",
+            "default" : "custom"
+          },
+          {
+            "name" : "h2_google",
+            "label" : "H2",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": true,
+            "default" : {
+              "size" : 3,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_h2",
+              "controlling_value_regex" : "google",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "h2_custom",
+            "label" : "H2",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": false,
+            "default" : {
+              "size" : 3,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_h2",
+              "controlling_value_regex" : "custom",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "font":true,
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "line_height",
+            "label" : "Line Height",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 50,
+            "step" : 0.05,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1
+          },
+          {
+            "name" : "weight",
+            "label" : "Font Weight",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 100,
+            "max" : 900,
+            "step" : 100,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 100
+          }
+        ]
+      },
+      {
+        "type" : "group",
+        "name":"h3_font",
+        "label":"H3 Font",
+        "children":[
+          {
+            "id" : "font_type_h3",
+            "name" : "font_type_h3",
+            "label" : "H3 Font Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "custom", "Custom" ],[ "google", "Google Font" ]],
+            "type" : "choice",
+            "default" : "custom"
+          },
+          {
+            "name" : "h3_google",
+            "label" : "H3",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": true,
+            "default" : {
+              "size" : 2.6,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_h3",
+              "controlling_value_regex" : "google",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "h3_custom",
+            "label" : "H3",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": false,
+            "default" : {
+              "size" : 2.6,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_h3",
+              "controlling_value_regex" : "custom",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "font":true,
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "line_height",
+            "label" : "Line Height",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 50,
+            "step" : 0.05,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1
+          },
+          {
+            "name" : "weight",
+            "label" : "Font Weight",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 100,
+            "max" : 900,
+            "step" : 100,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 100
+          }
+        ]
+      },
+      {
+        "type" : "group",
+        "name":"h4_font",
+        "label":"H4 Font",
+        "children":[
+          {
+            "id" : "font_type_h4",
+            "name" : "font_type_h4",
+            "label" : "H4 Font Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "custom", "Custom" ],[ "google", "Google Font" ]],
+            "type" : "choice",
+            "default" : "custom"
+          },
+          {
+            "name" : "h4_google",
+            "label" : "H4",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": true,
+            "default" : {
+              "size" : 2.4,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_h4",
+              "controlling_value_regex" : "google",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "h4_custom",
+            "label" : "H4",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": false,
+            "default" : {
+              "size" : 2.4,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_h4",
+              "controlling_value_regex" : "custom",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "font":true,
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "line_height",
+            "label" : "Line Height",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 50,
+            "step" : 0.05,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1
+          },
+          {
+            "name" : "weight",
+            "label" : "Font Weight",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 100,
+            "max" : 900,
+            "step" : 100,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 100
+          }
+        ]
+      },
+      {
+        "type" : "group",
+        "name":"h5_font",
+        "label":"H5 Font",
+        "children":[
+          {
+            "id" : "font_type_h5",
+            "name" : "font_type_h5",
+            "label" : "H5 Font Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "custom", "Custom" ],[ "google", "Google Font" ]],
+            "type" : "choice",
+            "default" : "custom"
+          },
+          {
+            "name" : "h5_google",
+            "label" : "H5",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": true,
+            "default" : {
+              "size" : 2,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_h5",
+              "controlling_value_regex" : "google",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "h5_custom",
+            "label" : "H5",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": false,
+            "default" : {
+              "size" : 2,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_h5",
+              "controlling_value_regex" : "custom",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "font":true,
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "line_height",
+            "label" : "Line Height",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 50,
+            "step" : 0.05,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1
+          },
+          {
+            "name" : "weight",
+            "label" : "Font Weight",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 100,
+            "max" : 900,
+            "step" : 100,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 100
+          }
+        ]
+      },
+      {
+        "type" : "group",
+        "name":"h6_font",
+        "label":"H6 Font",
+        "children":[
+          {
+            "id" : "font_type_h6",
+            "name" : "font_type_h6",
+            "label" : "H6 Font Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "custom", "Custom" ],[ "google", "Google Font" ]],
+            "type" : "choice",
+            "default" : "custom"
+          },
+          {
+            "name" : "h6_google",
+            "label" : "H6",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": true,
+            "default" : {
+              "size" : 1.8,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_h6",
+              "controlling_value_regex" : "google",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "h6_custom",
+            "label" : "H6",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": false,
+            "default" : {
+              "size" : 1.8,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_h6",
+              "controlling_value_regex" : "custom",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "font":true,
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "line_height",
+            "label" : "Line Height",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 50,
+            "step" : 0.05,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1
+          },
+          {
+            "name" : "weight",
+            "label" : "Font Weight",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 100,
+            "max" : 900,
+            "step" : 100,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 100
+          }
+        ]
+      },
+      {
+        "type" : "group",
+        "name":"paragraph_font",
+        "label":"Paragraph Font",
+        "children":[
+          {
+            "id" : "font_type_paragraph",
+            "name" : "font_type_paragraph",
+            "label" : "Paragraph Font Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "custom", "Custom" ],[ "google", "Google Font" ]],
+            "type" : "choice",
+            "default" : "custom"
+          },
+          {
+            "name" : "paragraph_google",
+            "label" : "Paragraph",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": true,
+            "default" : {
+              "size" : 1.6,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_paragraph",
+              "controlling_value_regex" : "google",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "paragraph_custom",
+            "label" : "Paragraph",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": false,
+            "default" : {
+              "size" : 1.6,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_paragraph",
+              "controlling_value_regex" : "custom",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "font":true,
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "line_height",
+            "label" : "Line Height",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 50,
+            "step" : 0.05,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1
+          },
+          {
+            "name" : "weight",
+            "label" : "Font Weight",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 100,
+            "max" : 900,
+            "step" : 100,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 100
+          }
+        ]
+      },
+      {
+        "type" : "group",
+        "name":"li_font",
+        "label":"List Font",
+        "children":[
+          {
+            "id" : "font_type_li",
+            "name" : "font_type_li",
+            "label" : "List Font Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "custom", "Custom" ],[ "google", "Google Font" ]],
+            "type" : "choice",
+            "default" : "custom"
+          },
+          {
+            "name" : "li_google",
+            "label" : "List",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": true,
+            "default" : {
+              "size" : 1.6,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_li",
+              "controlling_value_regex" : "google",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "li_custom",
+            "label" : "List",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": false,
+            "default" : {
+              "size" : 1.6,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_li",
+              "controlling_value_regex" : "custom",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "font":true,
+                "underline": true,
+                "styles": true
+              }
+            }
+          },
+          {
+            "name" : "line_height",
+            "label" : "Line Height",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 50,
+            "step" : 0.05,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1
+          },
+          {
+            "name" : "weight",
+            "label" : "Font Weight",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 100,
+            "max" : 900,
+            "step" : 100,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "branding",
+    "label": "Branding",
+    "expanded": false,
+    "children": [
+      {
+        "name" : "logo",
+        "label" : "Logo",
+        "required" : false,
+        "locked" : false,
+        "responsive" : true,
+        "resizable" : true,
+        "show_loading" : false,
+        "type" : "image",
+        "default" : {
+          "size_type" : "exact",
+          "src" : "",
+          "alt" : "image-alt-text",
+          "loading" : "lazy",
+          "width" : 128,
+          "height" : 128,
+          "max_width" : 128,
+          "max_height" : 128
+        }
+      },
+      {
+        "name" : "alternativelogo",
+        "label" : "Alternative Logo",
+        "required" : false,
+        "locked" : false,
+        "responsive" : true,
+        "resizable" : true,
+        "show_loading" : false,
+        "type" : "image",
+        "default" : {
+          "size_type" : "exact",
+          "src" : "",
+          "alt" : "image-alt-text",
+          "loading" : "lazy",
+          "width" : 128,
+          "height" : 128,
+          "max_width" : 128,
+          "max_height" : 128
+        }
+      },
+      {
+        "type": "group",
+        "name": "colors",
+        "label": "Colors",
+        "expanded": false,
+        "children": [
+          {
+            "name" : "primary",
+            "label" : "Primary",
+            "required" : false,
+            "locked" : false,
+            "type" : "color",
+            "default" : {
+              "color" : "#ff0000",
+              "opacity" : 100
+            }
+          },
+          {
+            "name" : "secondary",
+            "label" : "Secondary",
+            "required" : false,
+            "locked" : false,
+            "type" : "color",
+            "default" : {
+              "color" : "#ff0000",
+              "opacity" : 100
+            }
+          },
+          {
+            "name" : "tertiary",
+            "label" : "Tertiary",
+            "required" : false,
+            "locked" : false,
+            "type" : "color",
+            "default" : {
+              "color" : "#ff0000",
+              "opacity" : 100
+            }
+          },
+          {
+            "name" : "quaternary",
+            "label" : "Quaternary",
+            "required" : false,
+            "locked" : false,
+            "type" : "color",
+            "default" : {
+              "color" : "#ff0000",
+              "opacity" : 100
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "buttons_ctas",
+    "label": "Buttons & CTAs",
+    "expanded": false,
+    "children": [
+      {
+        "type": "group",
+        "name": "normal",
+        "label": "Normal Button",
+        "expanded": false,
+        "children": [
+          {
+            "id" : "font_type_button_normal",
+            "name" : "font_type_button",
+            "label" : "Buttons & CTAs Font Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "custom", "Custom" ],[ "google", "Google Font" ]],
+            "type" : "choice",
+            "default" : "google"
+          },
+          {
+            "name" : "button_google",
+            "label" : "Font",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": true,
+            "default" : {
+              "size" : 1.2,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_button_normal",
+              "controlling_value_regex" : "google",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "underline": true,
+                "styles": true,
+                "color":true
+              }
+            }
+          },
+          {
+            "name" : "button_custom",
+            "label" : "Font",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": false,
+            "default" : {
+              "size" : 1.2,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_button_normal",
+              "controlling_value_regex" : "custom",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "font":true,
+                "underline": true,
+                "styles": true,
+                "color":true
+              }
+            }
+          },
+          {
+            "name" : "line_height",
+            "label" : "Line Height",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 50,
+            "step" : 0.05,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1
+          },
+          {
+            "name" : "weight",
+            "label" : "Font Weight",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 100,
+            "max" : 900,
+            "step" : 100,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 100
+          },
+          {
+            "name" : "padding_top",
+            "label" : "Padding Top",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1.2,
+            "placeholder": "50",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "padding_right",
+            "label" : "Padding Right",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1.2,
+            "placeholder": "50",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "padding_bottom",
+            "label" : "Padding Bottom",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1.2,
+            "placeholder": "50",
+            "display_width": "half_width"
+          }
+          ,
+          {
+            "name" : "padding_left",
+            "label" : "Padding Left",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1.2,
+            "placeholder": "50",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "border_radius_top_left",
+            "label" : "Border Radius Top Left",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 0,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 0,
+            "placeholder": "0",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "border_radius_top_right",
+            "label" : "Border Radius Top Right",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 0,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 0,
+            "placeholder": "0",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "border_radius_bottom_right",
+            "label" : "Border Radius Bottom Right",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 0,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 0,
+            "placeholder": "0",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "border_radius_bottom_left",
+            "label" : "Border Radius Bottom Left",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 0,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 0,
+            "placeholder": "0",
+            "display_width": "half_width"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "name": "small",
+        "label": "Small Button",
+        "expanded": false,
+        "children": [
+          {
+            "id" : "font_type_button_small",
+            "name" : "font_type_button",
+            "label" : "Buttons & CTAs Font Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "custom", "Custom" ],[ "google", "Google Font" ]],
+            "type" : "choice",
+            "default" : "google"
+          },
+          {
+            "name" : "button_google",
+            "label" : "Font",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": true,
+            "default" : {
+              "size" : 1.2,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_button_small",
+              "controlling_value_regex" : "google",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "underline": true,
+                "styles": true,
+                "color":true
+              }
+            }
+          },
+          {
+            "name" : "button_custom",
+            "label" : "Font",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": false,
+            "default" : {
+              "size" : 1.2,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_button_small",
+              "controlling_value_regex" : "custom",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "font":true,
+                "underline": true,
+                "styles": true,
+                "color":true
+              }
+            }
+          },
+          {
+            "name" : "line_height",
+            "label" : "Line Height",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 50,
+            "step" : 0.05,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1
+          },
+          {
+            "name" : "weight",
+            "label" : "Font Weight",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 100,
+            "max" : 900,
+            "step" : 100,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 100
+          },
+          {
+            "name" : "padding_top",
+            "label" : "Padding Top",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1,
+            "placeholder": "50",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "padding_right",
+            "label" : "Padding Right",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1,
+            "placeholder": "50",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "padding_bottom",
+            "label" : "Padding Bottom",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1,
+            "placeholder": "50",
+            "display_width": "half_width"
+          }
+          ,
+          {
+            "name" : "padding_left",
+            "label" : "Padding Left",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1,
+            "placeholder": "50",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "border_radius_top_left",
+            "label" : "Border Radius Top Left",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 0,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 0,
+            "placeholder": "0",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "border_radius_top_right",
+            "label" : "Border Radius Top Right",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 0,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 0,
+            "placeholder": "0",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "border_radius_bottom_right",
+            "label" : "Border Radius Bottom Right",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 0,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 0,
+            "placeholder": "0",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "border_radius_bottom_left",
+            "label" : "Border Radius Bottom Left",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 0,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 0,
+            "placeholder": "0",
+            "display_width": "half_width"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "name": "large",
+        "label": "Large Button",
+        "expanded": false,
+        "children": [
+          {
+            "id" : "font_type_button_large",
+            "name" : "font_type_button",
+            "label" : "Buttons & CTAs Font Type",
+            "required" : false,
+            "locked" : false,
+            "display" : "select",
+            "choices" : [ [ "custom", "Custom" ],[ "google", "Google Font" ]],
+            "type" : "choice",
+            "default" : "google"
+          },
+          {
+            "name" : "button_google",
+            "label" : "Font",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": true,
+            "default" : {
+              "size" : 1.2,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_button_large",
+              "controlling_value_regex" : "google",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "underline": true,
+                "styles": true,
+                "color":true
+              }
+            }
+          },
+          {
+            "name" : "button_custom",
+            "label" : "Font",
+            "required" : false,
+            "locked" : false,
+            "type" : "font",
+            "load_external_fonts": false,
+            "default" : {
+              "size" : 1.2,
+              "font":"Merriweather",
+              "font_set":"GOOGLE",
+              "size_unit" : "rem",
+              "color" : "#000",
+              "styles" : { }
+            },
+            "visibility" : {
+              "controlling_field" : "font_type_button_large",
+              "controlling_value_regex" : "custom",
+              "operator" : "EQUAL",
+              "access" : null,
+              "hidden_subfields" : {
+                "font":true,
+                "underline": true,
+                "styles": true,
+                "color":true
+              }
+            }
+          },
+          {
+            "name" : "line_height",
+            "label" : "Line Height",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 50,
+            "step" : 0.05,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1
+          },
+          {
+            "name" : "weight",
+            "label" : "Font Weight",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 100,
+            "max" : 900,
+            "step" : 100,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 100
+          },
+          {
+            "name" : "padding_top",
+            "label" : "Padding Top",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1.5,
+            "placeholder": "50",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "padding_right",
+            "label" : "Padding Right",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1.5,
+            "placeholder": "50",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "padding_bottom",
+            "label" : "Padding Bottom",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1.5,
+            "placeholder": "50",
+            "display_width": "half_width"
+          }
+          ,
+          {
+            "name" : "padding_left",
+            "label" : "Padding Left",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 1,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 1.5,
+            "placeholder": "50",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "border_radius_top_left",
+            "label" : "Border Radius Top Left",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 0,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 0,
+            "placeholder": "0",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "border_radius_top_right",
+            "label" : "Border Radius Top Right",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 0,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 0,
+            "placeholder": "0",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "border_radius_bottom_right",
+            "label" : "Border Radius Bottom Right",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 0,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 0,
+            "placeholder": "0",
+            "display_width": "half_width"
+          },
+          {
+            "name" : "border_radius_bottom_left",
+            "label" : "Border Radius Bottom Left",
+            "required" : false,
+            "locked" : false,
+            "display" : "slider",
+            "min" : 0,
+            "max" : 100,
+            "step" : 1,
+            "type" : "number",
+            "prefix": "",
+            "suffix" : "",
+            "default" : 0,
+            "placeholder": "0",
+            "display_width": "half_width"
+          }
+        ]
+      }
+    ]
+  }
+]
