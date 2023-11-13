@@ -11,6 +11,6 @@ CSS: I am using a custom grid system build by me based on the bootstrap idea. st
 
 # How to Use:
 
-1. Upload it to your portal.
+1. Upload it to your portal [HubSpot CLI](https://developers.hubspot.com/docs/cms/developer-reference/local-development-cli).
 2. Set up the Theme settings.
 3. Build your pages using only one module (nonDND).
